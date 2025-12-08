@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, User, Lightbulb, Target } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
@@ -22,9 +22,12 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
-          </h2>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <User size={48} className="text-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold">
+              About <span className="gradient-text">Me</span>
+            </h2>
+          </div>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
         </motion.div>
 
@@ -35,9 +38,15 @@ const About = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="glass rounded-2xl p-8 md:p-12">
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-6 gap-6">
               <div className="p-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20">
                 <GraduationCap size={48} className="text-purple-400" />
+              </div>
+              <div className="p-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20">
+                <Lightbulb size={48} className="text-blue-400" />
+              </div>
+              <div className="p-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20">
+                <Target size={48} className="text-pink-400" />
               </div>
             </div>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">

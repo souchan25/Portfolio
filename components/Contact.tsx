@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -68,9 +68,12 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
-          </h2>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <MessageCircle size={48} className="text-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Get In <span className="gradient-text">Touch</span>
+            </h2>
+          </div>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
           <p className="text-gray-400 mt-4 text-lg">
             Let's connect and discuss opportunities or collaborations

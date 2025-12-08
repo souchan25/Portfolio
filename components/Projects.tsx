@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Stethoscope, UtensilsCrossed, Fish, FolderKanban } from "lucide-react";
 
 const Projects = () => {
   const ref = useRef(null);
@@ -18,6 +18,8 @@ const Projects = () => {
       github: "https://github.com/souchan25/AI_Health_Chatbot",
       gradient: "from-green-500/20 to-emerald-500/20",
       borderColor: "border-green-500/30",
+      icon: Stethoscope,
+      iconColor: "text-green-400",
     },
     {
       title: "Meal Planner",
@@ -27,6 +29,8 @@ const Projects = () => {
       github: "https://github.com/souchan25/MealPlanner",
       gradient: "from-orange-500/20 to-red-500/20",
       borderColor: "border-orange-500/30",
+      icon: UtensilsCrossed,
+      iconColor: "text-orange-400",
     },
     {
       title: "Fish Marketplace",
@@ -36,6 +40,8 @@ const Projects = () => {
       github: "https://github.com/souchan25/FishOceanConnect",
       gradient: "from-blue-500/20 to-cyan-500/20",
       borderColor: "border-blue-500/30",
+      icon: Fish,
+      iconColor: "text-blue-400",
     },
   ];
 
@@ -67,9 +73,12 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Projects</span>
-          </h2>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <FolderKanban size={48} className="text-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold">
+              My <span className="gradient-text">Projects</span>
+            </h2>
+          </div>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
           <p className="text-gray-400 mt-4 text-lg">
             Here are some of my recent projects that showcase my skills and passion for development
@@ -94,7 +103,17 @@ const Projects = () => {
               ></div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
+                <div className="flex items-center gap-3 mb-3">
+                  {(() => {
+                    const IconComponent = project.icon;
+                    return (
+                      <div className="p-2 rounded-lg bg-white/5">
+                        <IconComponent size={28} className={project.iconColor} />
+                      </div>
+                    );
+                  })()}
+                  <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                </div>
                 <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
