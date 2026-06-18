@@ -47,7 +47,7 @@ const Hero = () => {
               Bachelor of Science in Information Technology
             </p>
             <p className="text-lg md:text-xl text-gray-500">
-              Aspiring Developer • 4th Year Graduating Student
+              Aspiring Developer • Fresh Graduate
             </p>
           </motion.div>
 

@@ -51,7 +51,7 @@ const About = () => {
             </div>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
               Hello! I'm <span className="text-white font-semibold">Eugene D. Pausa</span>, a
-              4th-year student pursuing a{" "}
+              fresh graduate with a{" "}
               <span className="text-white font-semibold">
                 Bachelor of Science in Information Technology
               </span>
@@ -59,7 +59,7 @@ const About = () => {
               difference.
             </p>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-              As I approach graduation, I'm excited to apply my knowledge in{" "}
+              As a fresh graduate, I'm excited to apply my knowledge in{" "}
               <span className="gradient-text font-semibold">Python, Django, HTML, CSS,</span> and{" "}
               <span className="gradient-text font-semibold">PHP</span> to real-world projects. I
               enjoy building user-friendly interfaces and robust backend systems that solve complex
